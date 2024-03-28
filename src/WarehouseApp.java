@@ -102,6 +102,7 @@ public class WarehouseApp {
         System.out.println("Email: bekzotovich12@gmail.com");
 
         System.out.println("\nAvailable Commands:");
+        System.out.println("* help");
         System.out.println("* search <product name>");
         System.out.println("* list all");
         System.out.println("* exit");
@@ -141,6 +142,12 @@ public class WarehouseApp {
                         System.out.println("Invalid command format. Usage: list all");
                     }
                     break;
+                case "clear":
+                    clearConsole();
+                    break;
+                case "help":
+                    displayHelp();
+                    break;
                 case "exit":
                     exit = true;
                     System.out.println("Exiting...");
@@ -150,5 +157,18 @@ public class WarehouseApp {
             }
         }
         scanner.close();
+    }
+    public static void displayHelp() {
+        System.out.println("\nAvailable Commands:");
+        System.out.println("* search <product name>: Search for a product by name.");
+        System.out.println("* list all: List all products in the inventory.");
+        System.out.println("* clear: Clear the console screen.");
+        System.out.println("* help: Display available commands.");
+        System.out.println("* exit: Exit the application.");
+    }
+    public static void clearConsole() {
+        for (int i = 0; i < 20; i++) {
+            System.out.println();
+        }
     }
 }
