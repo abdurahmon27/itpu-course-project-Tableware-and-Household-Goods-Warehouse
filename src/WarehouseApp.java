@@ -50,7 +50,7 @@ class WarehouseManager {
 
     public WarehouseManager() {
         this.inventory = new ArrayList<>();
-        // Adding example products
+
         inventory.add(new Product(1, "Plate", "Tableware", 5.99, 100));
         inventory.add(new Product(2, "Cup", "Tableware", 3.49, 150));
         inventory.add(new Product(3, "Fork", "Cutlery", 1.99, 200));
