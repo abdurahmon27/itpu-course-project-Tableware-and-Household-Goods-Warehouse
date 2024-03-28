@@ -41,13 +41,7 @@ class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", category='" + category + '\'' +
-                ", price=" + price +
-                ", quantity=" + quantity +
-                '}';
+        return String.format("ID: %d, Name: %s, Category: %s, Price: $%.2f, Quantity: %d", id, name, category, price, quantity);
     }
 }
 
@@ -56,6 +50,11 @@ class WarehouseManager {
 
     public WarehouseManager() {
         this.inventory = new ArrayList<>();
+        // Adding example products
+        inventory.add(new Product(1, "Plate", "Tableware", 5.99, 100));
+        inventory.add(new Product(2, "Cup", "Tableware", 3.49, 150));
+        inventory.add(new Product(3, "Fork", "Cutlery", 1.99, 200));
+        inventory.add(new Product(4, "Knife", "Cutlery", 2.49, 180));
     }
 
     public void readInventoryFromFile(String fileName) {
@@ -103,9 +102,9 @@ public class WarehouseApp {
         System.out.println("Email: bekzotovich12@gmail.com");
 
         System.out.println("\nAvailable Commands:");
-        System.out.println("1. search <product name>");
-        System.out.println("2. list all");
-        System.out.println("3. exit");
+        System.out.println("* search <product name>");
+        System.out.println("* list all");
+        System.out.println("* exit");
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -119,7 +118,7 @@ public class WarehouseApp {
                         String productName = parts[1];
                         List<Product> searchResults = manager.searchByName(productName);
                         if (searchResults.isEmpty()) {
-                            System.out.println("No products found with the name: " + productName);
+                            System.out.println("No products found for: " + productName);
                         } else {
                             System.out.println("Search Results:");
                             for (Product product : searchResults) {
@@ -133,17 +132,21 @@ public class WarehouseApp {
                 case "list":
                     if (parts.length == 2 && parts[1].equalsIgnoreCase("all")) {
                         System.out.println("All Products:");
+                        System.out.println("--------------------------------------------------------------");
+                        System.out.printf("%-5s %-15s %-15s %-10s %-8s\n", "ID", "Name", "Category", "Price ($)", "Quantity");
+                        System.out.println("--------------------------------------------------------------");
                         manager.displayAllProducts();
+                        System.out.println("--------------------------------------------------------------");
                     } else {
                         System.out.println("Invalid command format. Usage: list all");
                     }
                     break;
                 case "exit":
                     exit = true;
-                    System.out.println("Exiting the application...");
+                    System.out.println("Exiting...");
                     break;
                 default:
-                    System.out.println("Invalid command. Please try again.");
+                    System.out.println("Invalid command.");
             }
         }
         scanner.close();
