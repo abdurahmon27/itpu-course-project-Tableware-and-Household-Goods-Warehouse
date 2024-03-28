@@ -1,3 +1,12 @@
+//  Hello Master. I'm Abdurahmon (in passports Raxmon). Actually I'm a Frontend developer, currently I'm learning Mern stack.
+// So I don't want to learn java, I like this language it's so amazing I tried.
+//but in my circumstances I need to work on frontend now.
+// Currently, I have many problems, my situation is not very good, I can't find time to study beacuse of my situation and work.
+// That's why I made it as far as I could from the course project,
+// I also used AI in a small parts, and some parts are similar to js and ts.
+// but I'm afraid I won't be able to learn this language.
+// raxmon_mamadiyorov@student.itpu.uz
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -172,3 +181,4 @@ public class WarehouseApp {
         }
     }
 }
+
