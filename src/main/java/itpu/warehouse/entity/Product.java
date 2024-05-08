@@ -1,11 +1,11 @@
-package main.java.org.warehouse.entity;
+package main.java.itpu.warehouse.entity;
 
 public class Product {
-    private int id;
-    private String name;
-    private String category;
-    private double price;
-    private int quantity;
+    private final int id;
+    private final String name;
+    private final String category;
+    private final double price;
+    private final int quantity;
 
     public Product(int id, String name, String category, double price, int quantity) {
         this.id = id;

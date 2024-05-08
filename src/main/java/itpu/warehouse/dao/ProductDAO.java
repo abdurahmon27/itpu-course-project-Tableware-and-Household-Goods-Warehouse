@@ -1,6 +1,6 @@
-package main.java.org.warehouse.dao;
+package main.java.itpu.warehouse.dao;
 
-import main.java.org.warehouse.entity.Product;
+import main.java.itpu.warehouse.entity.Product;
 import java.util.List;
 
 public interface ProductDAO {
