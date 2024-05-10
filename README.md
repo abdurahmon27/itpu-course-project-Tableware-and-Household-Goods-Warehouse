@@ -47,6 +47,7 @@ Available Commands:
 * help
 * search <product name>
 * list all
+* clear
 * exit
 
 Enter command: search Plate

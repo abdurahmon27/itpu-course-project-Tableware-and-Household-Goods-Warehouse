@@ -4,6 +4,8 @@ package main.java.itpu.warehouse.UI;
 import main.java.itpu.warehouse.dao.ProductDAO;
 import main.java.itpu.warehouse.entity.Product;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Console {
@@ -21,8 +23,12 @@ public class Console {
     }
 
     public void handleSearchCommand(String[] parts, ProductDAO productDAO) {
-        if (parts.length == 2) {
-            String productName = parts[1];
+        if (parts.length >= 2) {
+            StringBuffer pName = new StringBuffer();
+            for (int i=1; i<parts.length; i++) {
+                pName.append(parts[i]).append(" ");
+            }
+            String productName = pName.toString().trim();
             List<Product> searchResults = productDAO.findByName(productName);
             if (searchResults.isEmpty()) {
                 System.out.println("No products found for: " + productName);
