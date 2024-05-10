@@ -18,7 +18,7 @@ public class CupController {
     public void getCup(Integer id) {
         ProductDto dto = cupService.getById(id);
         if(dto != null) {
-            System.out.println(dto.toString());
+            System.out.println(dto);
         } else {
             System.out.println("Cup not found!!!");
         }

@@ -3,7 +3,7 @@ package org.warehouse;
 
 import org.warehouse.dao.ProductDAO;
 import org.warehouse.dao.ProductDAOImpl;
-import org.warehouse.UI.Console;
+import org.warehouse.ui.Console;
 import org.warehouse.utils.DataUtil;
 
 import java.util.Scanner;

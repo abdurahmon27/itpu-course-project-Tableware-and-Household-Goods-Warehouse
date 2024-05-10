@@ -41,7 +41,7 @@ Upon running the application, you will be greeted with a welcome message and a l
 Tableware and Household Goods Warehouse Management System
 Version: 1.0.0
 Creator: Raxmon Mamadiyorov | raxmon_mamadiyorov@student.itpu.uz | bekzotovich.uz
-Email: bekzotovich12@gmail.com
+Email: bekzotovich12@gmail.com | raxmon_mamadiyorov@student.itpu.uz
 
 Available Commands:
 * help

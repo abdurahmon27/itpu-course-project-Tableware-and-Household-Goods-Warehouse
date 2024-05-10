@@ -49,10 +49,6 @@ public class Product {
         this.name = name;
     }
 
-//    public void setCategory(String category) {
-//        this.category = category;
-//    }
-
     public void setPrice(Float price) {
         this.price = price;
     }

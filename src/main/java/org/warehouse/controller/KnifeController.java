@@ -19,7 +19,7 @@ public class KnifeController {
     public void getKnife(Integer id) {
         ProductDto dto = knifeService.getById(id);
         if(dto != null) {
-            System.out.println(dto.toString());
+            System.out.println(dto);
         } else {
             System.out.println("Knife not found!!!");
         }

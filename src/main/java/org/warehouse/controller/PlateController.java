@@ -19,7 +19,7 @@ public class PlateController {
     public void getPlate(Integer id) {
         ProductDto dto = plateService.getById(id);
         if(dto != null) {
-            System.out.println(dto.toString());
+            System.out.println(dto);
         } else {
             System.out.println("Plate not found!!!");
         }

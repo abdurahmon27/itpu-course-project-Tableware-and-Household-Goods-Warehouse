@@ -1,5 +1,5 @@
 // Console.java
-package org.warehouse.UI;
+package org.warehouse.ui;
 
 import org.warehouse.dao.ProductDAO;
 import org.warehouse.entity.Product;
