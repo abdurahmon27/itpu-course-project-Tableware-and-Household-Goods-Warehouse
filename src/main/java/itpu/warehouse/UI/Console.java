@@ -4,8 +4,6 @@ package main.java.itpu.warehouse.UI;
 import main.java.itpu.warehouse.dao.ProductDAO;
 import main.java.itpu.warehouse.entity.Product;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Console {
@@ -13,7 +11,7 @@ public class Console {
         System.out.println("Tableware and Household Goods Warehouse Management System");
         System.out.println("Version: 1.0.0");
         System.out.println("Creator: Raxmon Mamadiyorov | raxmon_mamadiyorov@student.itpu.uz| bekzotovich.uz");
-        System.out.println("Email: bekzotovich12@gmail.com");
+        System.out.println("Email: bekzotovich12@gmail.com | raxmon_mamadiyorov@student.itpu.uz");
 
         System.out.println("\nAvailable Commands:");
         System.out.println("* help");
@@ -24,7 +22,7 @@ public class Console {
 
     public void handleSearchCommand(String[] parts, ProductDAO productDAO) {
         if (parts.length >= 2) {
-            StringBuffer pName = new StringBuffer();
+            StringBuilder pName = new StringBuilder();
             for (int i=1; i<parts.length; i++) {
                 pName.append(parts[i]).append(" ");
             }

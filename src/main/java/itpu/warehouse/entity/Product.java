@@ -9,9 +9,6 @@ public class Product {
     private Float price;
     private Integer quantity;
 
-    public Product() {
-    }
-
     public Product(Integer id, String name, String category, Float price, Integer quantity) {
         this.id = id;
         this.name = name;
@@ -48,9 +45,9 @@ public class Product {
         this.name = name;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
+//    public void setCategory(String category) {
+//        this.category = category;
+//    }
 
     public void setPrice(Float price) {
         this.price = price;

@@ -11,10 +11,6 @@ import static main.java.itpu.warehouse.Constants.products;
 
 public class CupDAOImpl extends ProductDAOImpl implements CupDAO {
 
-    public CupDAOImpl() {
-
-    }
-
     @Override
     public Optional<Product> findById(Integer id) {
         return products.values().stream().filter(product -> product.getId().equals(id) && PRODUCT_CUP.equals(product.getCategory()))

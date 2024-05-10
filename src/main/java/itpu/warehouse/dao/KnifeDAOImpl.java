@@ -9,9 +9,6 @@ import java.util.stream.Collectors;
 import static main.java.itpu.warehouse.Constants.*;
 
 public class KnifeDAOImpl extends ProductDAOImpl implements KnifeDAO {
-    public KnifeDAOImpl() {
-        
-    }
 
     @Override
     public Optional<Product> findById(Integer id) {

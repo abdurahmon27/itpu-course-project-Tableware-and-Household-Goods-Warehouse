@@ -3,11 +3,9 @@ package main.java.itpu.warehouse;
 
 import main.java.itpu.warehouse.dao.ProductDAO;
 import main.java.itpu.warehouse.dao.ProductDAOImpl;
-import main.java.itpu.warehouse.entity.Product;
 import main.java.itpu.warehouse.UI.Console;
 import main.java.itpu.warehouse.utils.DataUtil;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {

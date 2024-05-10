@@ -9,9 +9,6 @@ import java.util.stream.Collectors;
 import static main.java.itpu.warehouse.Constants.*;
 
 public class PlateDAOImpl extends ProductDAOImpl implements PlateDAO {
-    public PlateDAOImpl() {
-        
-    }
 
     @Override
     public Optional<Product> findById(Integer id) {

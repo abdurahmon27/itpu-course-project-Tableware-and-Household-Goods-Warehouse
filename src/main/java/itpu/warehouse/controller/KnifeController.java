@@ -2,7 +2,7 @@ package main.java.itpu.warehouse.controller;
 
 import main.java.itpu.warehouse.dto.ProductDto;
 import main.java.itpu.warehouse.services.KnifeService;
-import main.java.itpu.warehouse.services.KnifeService;
+
 
 public class KnifeController {
 
