@@ -17,9 +17,31 @@ public class Console {
 
         System.out.println("\nAvailable Commands:");
         System.out.println("* help");
-        System.out.println("* search <product name>");
+        System.out.println("* search <id> <name>");
         System.out.println("* list all");
+        System.out.println("* add");
         System.out.println("* exit");
+    }
+
+    public void handleAddCommand(String[] parts, ProductDAO productDAO) {
+        if (parts.length == 6) {
+            try {
+                Integer id = Integer.valueOf(parts[1]);
+                String name = parts[2];
+                String category = parts[3];
+                Float price = Float.parseFloat(parts[4]);
+                Integer quantity = Integer.parseInt(parts[5]);
+
+                Product newProduct = new Product(id, name, category, price, quantity);
+                productDAO.save(newProduct);
+
+                System.out.println("Product added successfully.");
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid price or quantity format. Please enter valid numbers.");
+            }
+        } else {
+            System.out.println("Invalid command format. Usage: add <id> <name> <category> <price> <quantity>");
+        }
     }
 
     public void handleSearchCommand(String[] parts, ProductDAO productDAO) {
@@ -113,6 +135,7 @@ public class Console {
         System.out.println("* search name <product name>: Search for a product by name.");
         System.out.println("* list all: List all products in the inventory.");
         System.out.println("* clear: Clear the console screen.");
+        System.out.println("* add :You can add product while application is working.");
         System.out.println("* help: Display available commands.");
         System.out.println("* exit: Exit the application.");
     }

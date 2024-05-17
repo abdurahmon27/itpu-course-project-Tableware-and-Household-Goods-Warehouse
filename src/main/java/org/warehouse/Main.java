@@ -36,6 +36,9 @@ public class Main {
                 case "help":
                     console.displayHelp();
                     break;
+                case "add":
+                    console.handleAddCommand(parts, productDAO);
+                    break;
                 case "exit":
                     exit = true;
                     console.printExitMessage();
